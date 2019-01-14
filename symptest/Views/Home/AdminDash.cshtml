@@ -1,0 +1,86 @@
+﻿<html>
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style>
+        .center {
+            margin: auto;
+            width: 100%;
+            border: 10px solid BF3EFF;
+            padding: 30px;
+        }
+        .search {
+            margin: auto;
+            width: 75%;
+            border: 10px solid BF3EFF;
+            padding: 30px;
+        }
+        .btn-primary {
+            margin: auto;
+            width: 100%;
+            background-color: #660198;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<div class="center" style="width: 500px;">
+    <h1>Hi Athlene, What would you like to do today?</h1>
+</div>
+<div class="search">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group" id="adv-search">
+                <input type="text" class="form-control" placeholder="Search for a Client" />
+                <div class="input-group-btn">
+                    <div class="btn-group" role="group">
+                        <div class="dropdown dropdown-lg">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <label for="filter">Filter by</label>
+                                        <select class="form-control">
+                                            <option value="0" selected>All Snippets</option>
+                                            <option value="1">Characteristic 1</option>
+                                            <option value="2">Characteristic 2</option>
+                                            <option value="3">Characteristic 3</option>
+                                            <option value="4">Characteristic 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contain">Author</label>
+                                        <input class="form-control" type="text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contain">Contains the words</label>
+                                        <input class="form-control" type="text" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </form>
+                            </div><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="center" style="width: 500px;">
+    <button a href="" type="button" class="btn btn-primary btn-lg btn-block"><i class="glyphicon glyphicon-user" style="color : #ffffff;"></i>&nbsp; Users</button>
+    <button a href="https://localhost:44377/Home/Users" type="button" class="btn btn-Dark btn-lg btn-block">Manage Clients</button>
+    <button a href="#" type="button" class="btn btn-dark btn-lg btn-block">Generate Reports</button>
+    <button a href="#" type="button" class="btn btn-dark btn-lg btn-block">Manage Assessments</button>
+    <button a href="#" type="button" class="btn btn-dark btn-lg btn-block">Import/Export</button>
+
+</div>
+
+    </body>
+</html>

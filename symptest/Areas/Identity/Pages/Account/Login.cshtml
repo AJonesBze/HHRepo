@@ -1,0 +1,87 @@
+﻿@page
+@model LoginModel
+
+<style>
+    .center {
+        margin: 25px;
+        margin-top: 5%;
+        width: 40%;
+        height: 80% border: 10px solid BF3EFF;
+        border-radius: 5px;
+        padding: 25px;
+        background: rgba(255, 255, 255, 0.80)
+    }
+
+    .btn-default {
+        margin: auto;
+        width: 100%;
+        background-color: #660198;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+    body {
+        background-image: url("http://athlenevjones.com/hugging-mother-and-daughter-PWLE4MZ.jpg");
+        background-size: cover;
+        
+    }
+</style>
+
+<div class="center">
+    <h2 id="demo"></h2>
+    <form method="post">
+        <h4>**For Testing purposes, click register at the bottom of this box. Create an account, then log in to view the admin area.</h4>
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Input.Email"></label>
+            <input asp-for="Input.Email" class="form-control" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Input.Password"></label>
+            <input asp-for="Input.Password" class="form-control" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <label asp-for="Input.RememberMe">
+                    <input asp-for="Input.RememberMe" />
+                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-log-in" style="color : #ffffff;"></i>&nbsp;&nbsp;Log in</button>
+        </div>
+        <div class="form-group">
+            <p>
+                <a asp-page="./ForgotPassword">Forgot your password?</a>
+            </p>
+            <p>
+                <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+            </p>
+        </div>
+    </form>
+
+</div>
+<script>
+    function myFunction() {
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 10) {
+            greeting = "Good Morning. Login, let's get started.";
+        } else if (time < 20) {
+            greeting = "Good Afternoon. Login, let's get started.";
+        } else {
+            greeting = "Good Evening. Login, let's get started.";
+        }
+
+        return greeting;
+
+    }
+    document.getElementById("demo").innerHTML = myFunction();
+</script>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

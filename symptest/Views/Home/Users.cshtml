@@ -1,0 +1,244 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style>
+    .center {
+        margin: auto;
+        width: 100%;
+        border: 10px solid BF3EFF;
+        padding: 30px;
+    }
+
+    .btn-primary {
+        margin: auto;
+        width: 100%;
+        background-color: #660198;
+        padding: 10px;
+    }
+
+    input {
+        box-sizing: border-box;
+        border: .5px solid lightgrey;
+        border-radius: 2px;
+        padding: 7px;
+    }
+
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+
+
+    th, td {
+        padding: 5px;
+    }
+
+    th {
+        background-color: grey;
+        color: white;
+        body
+</style>
+
+</head>
+<body>
+
+    <div class="container">
+        
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <br />
+    <div class="center" style="width: 100%;">
+        <div>
+            <table style="width:100%">
+                <tr>
+                    <td></td>
+                    <td><h3 align="center">Manage System Users (Admin Only)</h3></td>
+                    <td><button  type="button"  onclick="location.href='@Url.Action("Account/Register", "Identity")'" align="right" class="btn btn-primary btn-sm btn-block"><i class="glyphicon glyphicon-user" style="color : #fffff"></i>&nbsp; Add New User</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <form>
+            <table style="width:100%">
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>User Role</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+                </tr>
+                <tr>
+                    <td><input type="text" value="LaShawnda"><br /></td>
+                    <td><input type="text" value="Rainge"><br /></td>
+                    <td><input type="text" value="LRaingeHH"><br /></td>
+                    <td><input type="password" value="Sankore1!"><br /></td>
+                    <td>
+                        <select name="cars">
+                            <option value="Active" selected>Active</option>
+                            <option value="In-Active">In-Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select><br />
+                    </td>
+                    <td>
+                        <select name="cars">
+                            <option value="Administrator" selected>Administrator</option>
+                            <option value="Counselor">Counselor</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </td>
+                    <td><button type="button"  data-toggle="modal" data-target="#myModal" align="right" class="btn btn-primary btn-sm btn-block">Edit</button></td>
+                    <td><button a href="/Users" type="button" class="btn btn-primary btn-sm btn-block">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="Gayle"><br /></td>
+                    <td><input type="text" value="Patin"><br /></td>
+                    <td><input type="text" value="GPatinHH"><br /></td>
+                    <td><input type="password" value="Sankore1!"><br /></td>
+                    <td>
+                        <select name="status">
+                            <option value="Active">Active</option>
+                            <option value="In-Active" selected>In-Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select><br />
+                    </td>
+                    <td>
+                        <select name="role">
+                            <option value="Administrator">Administrator</option>
+                            <option value="Counselor">Counselor</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </td>
+                    <td><button type="button"  data-toggle="modal" data-target="#myModal" align="right"  class="btn btn-primary btn-sm btn-block">Edit</button></td>
+                    <td><button a href="/Users" type="button" class="btn btn-primary btn-sm btn-block">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="LaShawnda"><br /></td>
+                    <td><input type="text" value="Rainge"><br /></td>
+                    <td><input type="text" value="LRaingeHH"><br /></td>
+                    <td><input type="password" value="Sankore1!"><br /></td>
+                    <td>
+                        <select name="cars">
+                            <option value="Active">Active</option>
+                            <option value="In-Active">In-Active</option>
+                            <option value="Blocked" selected>Blocked</option>
+                        </select><br />
+                    </td>
+                    <td>
+                        <select name="cars">
+                            <option value="Administrator">Administrator</option>
+                            <option value="Counselor">Counselor</option>
+                            <option value="Intern" selected>Intern</option>
+                        </select>
+                    </td>
+                    <td><button type="button"  data-toggle="modal" data-target="#myModal" align="right" class="btn btn-primary btn-sm btn-block">Edit</button></td>
+                    <td><button a href="/Users" type="button" class="btn btn-primary btn-sm btn-block">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="LaShawnda"><br /></td>
+                    <td><input type="text" value="Rainge"><br /></td>
+                    <td><input type="text" value="LRaingeHH"><br /></td>
+                    <td><input type="password" name="Sankore1!"><br /></td>
+                    <td>
+                        <select name="cars">
+                            <option value="Active">Active</option>
+                            <option value="In-Active">In-Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select><br />
+                    </td>
+                    <td>
+                        <select name="cars">
+                            <option value="Administrator">Administrator</option>
+                            <option value="Counselor">Counselor</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </td>
+                    <td><button type="button"  data-toggle="modal" data-target="#myModal" align="right"  class="btn btn-primary btn-sm btn-block">Edit</button></td>
+                    <td><button a href="/Users" type="button" class="btn btn-primary btn-sm btn-block">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="LaShawnda"><br /></td>
+                    <td><input type="text" value="Rainge"><br /></td>
+                    <td><input type="text" value="LRaingeHH"><br /></td>
+                    <td><input type="password" name="Sankore1!"><br /></td>
+                    <td>
+                        <select name="cars">
+                            <option value="Active">Active</option>
+                            <option value="In-Active">In-Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select><br />
+                    </td>
+                    <td>
+                        <select name="cars">
+                            <option value="Administrator">Administrator</option>
+                            <option value="Counselor">Counselor</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </td>
+                    <td><button type="button"  data-toggle="modal" data-target="#myModal" align="right"  class="btn btn-primary btn-sm btn-block">Edit</button></td>
+                    <td><button a href="/Users" type="button" class="btn btn-primary btn-sm btn-block">Delete</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="LaShawnda"><br /></td>
+                    <td><input type="text" value="Rainge"><br /></td>
+                    <td><input type="text" value="LRaingeHH"><br /></td>
+                    <td><input type="password" name="Sankore1!"><br /></td>
+                    <td>
+                        <select name="cars">
+                            <option value="Active">Active</option>
+                            <option value="In-Active">In-Active</option>
+                            <option value="Blocked">Blocked</option>
+                        </select><br />
+                    </td>
+                    <td>
+                        <select name="cars">
+                            <option value="Administrator">Administrator</option>
+                            <option value="Counselor">Counselor</option>
+                            <option value="Intern">Intern</option>
+                        </select>
+                    </td>
+                    <td><button type="button"  data-toggle="modal" data-target="#myModal" align="right"  class="btn btn-primary btn-sm btn-block">Edit</button></td>
+                    <td><button a href="/Users" type="button" class="btn btn-primary btn-sm btn-block">Delete</button></td>
+                </tr>
+            </table>
+
+
+            </table>
+        </form>
+
+
+    </div>
+    </body>

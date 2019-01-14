@@ -1,4 +1,37 @@
 ﻿<!DOCTYPE html>
+
+<style>
+    .logo {
+        margin: auto;
+        width:18%;
+        padding: 40px;
+    }
+
+    .ul {
+        background-color: azure
+
+    }
+    .active {
+        background-color: #4CAF50;
+    }
+
+    .navbar-nav {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        border-bottom-width: 10px;
+        border-color: #000000;
+    }
+
+    .navbar navbar-default {
+        min-height: 32px !important;
+        border-bottom-width: 10px;
+        border: 5px;
+        border-color: #000000;
+
+    }
+</style>
+
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,7 +50,7 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,26 +59,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">symptest</a>
-            </div>
+                <a class="navbar-brand" rel="home" href="Index" title="">
+                    <img style="max-width:150px; margin-top: -4px;"
+                         src="http://athlenevjones.com/hh%20hortz.png">
+                </a>
+                </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Identity" asp-action="Account/Manage">Your Profile</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
         </div>
     </nav>
-
+    
     <partial name="_CookieConsentPartial" />
-
+    
+        
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - symptest</p>
+            <p>&copy; 2018 - Net Assets. All rights reserved.</p>
         </footer>
     </div>
 
@@ -71,5 +107,8 @@
     </environment>
 
     @RenderSection("Scripts", required: false)
+
+
+
 </body>
 </html>

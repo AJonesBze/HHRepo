@@ -8,28 +8,31 @@ using symptest.Models;
 
 namespace symptest.Controllers
 {
+    
     public class HomeController : Controller
     {
+
+        [Microsoft.AspNetCore.Authorization.Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult AdminDash()
         {
             ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult CounselorDash()
         {
             ViewData["Message"] = "Your contact page.";
 
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Users()
         {
             return View();
         }
