@@ -1,0 +1,66 @@
+﻿@model symptest.Models.Client
+
+@{
+    ViewData["Title"] = "ClientReport";
+}
+
+<h2>ClientReport</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client_Date_Of_Birth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client_Date_Of_Birth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Relationship_Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Relationship_Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Advocate_Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Advocate_Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes_On_Client)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Notes_On_Client)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ethnicity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ethnicity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Race)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Race)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Partner_Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Partner_Gender)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ClientId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -34,6 +34,46 @@ namespace symptest.Models
             }//end of using
         }//end of AddAdmin
 
+        public Client GetClient(string id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT Client_ID, Client_Date_Of_Birth, Relationship_Status, Advocate_Name, Notes_On_Client, Gender, Ethnicity, Race, Partner_Gender FROM Client WHERE Client_ID='" + id + "';", con);
+
+                con.Open();
+
+                //https://localhost:44377/Client/ClientReport/1234
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    Client client = new Client();
+                    client.ClientId = (String)reader["Client_ID"];
+                    client.Client_Date_Of_Birth = (DateTime)reader["Client_Date_Of_Birth"];
+                    client.Relationship_Status = (String)reader["Relationship_Status"];
+                    client.Advocate_Name = (String)reader["Advocate_Name"];
+
+                    var notes = reader["Notes_On_Client"];
+                    client.Notes_On_Client = (notes == DBNull.Value) ? string.Empty : notes.ToString();
+                    client.Gender = (String)reader["Gender"];
+                    client.Ethnicity = (String)reader["Ethnicity"];
+                    client.Race = (String)reader["Race"];
+                    var gender = reader["Partner_Gender"];
+                    client.Partner_Gender = (gender == DBNull.Value) ? string.Empty : gender.ToString();
+
+                    con.Close();
+
+                    return client;
+                }
+                
+                con.Close();
+
+                return null;
+
+            }//end of using
+
+        }//end of AddAdmin
+
         public IEnumerable<Client> GetAllClients()
         {
             List<Client> lstClients = new List<Client>();

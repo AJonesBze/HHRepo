@@ -37,6 +37,14 @@ namespace symptest
         }//end Addclient
 
         [HttpGet]
+        public IActionResult ClientReport(string id)
+        {
+            Client client = new Client();
+            client = objClient.GetClient(id);
+            return View(client);
+        }//end of IActionResult
+
+        [HttpGet]
         public IActionResult Index()
         {
             List<Client> lstClients = new List<Client>();
